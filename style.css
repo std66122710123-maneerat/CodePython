@@ -1,57 +1,61 @@
+* { box-sizing: border-box; }
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   background: #f4f9f4;
   display: flex;
   justify-content: center;
   padding: 20px;
+  margin: 0;
 }
 
 .container {
   background: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-  width: 400px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  width: 420px;
+  max-width: 95%;
   text-align: center;
 }
 
-h1 {
-  color: #00a859;
+h1 { color: #00a859; margin: 0 0 12px 0; }
+.form { margin: 10px 0 16px 0; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+input[type="text"], input[type="number"] {
+  padding: 8px 10px;
+  border: 1px solid #d0d7d0;
+  border-radius: 8px;
+  width: 160px;
 }
-
-.form {
-  margin-bottom: 15px;
-}
-
-input {
-  padding: 8px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
 button {
   background: #00a859;
-  color: white;
+  color: #fff;
   border: none;
   padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { opacity: 0.95; }
+#expense-list { list-style: none; padding: 0; margin: 10px 0; text-align: left; max-height: 320px; overflow:auto; }
+#expense-list li {
+  background: #eafbea;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.item-left { display:flex; flex-direction:column; }
+.small { font-size: 0.9em; color: #333; }
+.actions { display: flex; gap: 6px; }
+.action-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 6px 8px;
   border-radius: 6px;
   cursor: pointer;
 }
-
-button:hover {
-  background: #008f4c;
-}
-
-#expense-list {
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-#expense-list li {
-  background: #eafbea;
-  padding: 6px;
-  margin: 4px 0;
-  border-radius: 6px;
-}
+.action-btn.delete { border-color: #ffcccc; color: #b80000; }
+.summary { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:12px; }
+.danger { background: #ff6b6b; }
