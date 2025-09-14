@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เว็บบันทึกรายจ่ายรายวัน</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 เว็บบันทึกรายจ่ายรายวัน</h1>
+    
+    <div class="form">
+      <input type="text" id="item" placeholder="ชื่อรายการ">
+      <input type="number" id="amount" placeholder="จำนวนเงิน (บาท)">
+      <button onclick="addExpense()">➕ เพิ่มรายการ</button>
+    </div>
+
+    <h2>📒 รายการรายจ่ายวันนี้</h2>
+    <ul id="expense-list"></ul>
+
+    <h3 id="total">รวมทั้งหมด: 0 บาท</h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
